@@ -1,21 +1,14 @@
 <template>
     <div>
-        <p>这是HOME</p>
+        项目展示
     </div>
 </template>
-
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from "vue"
 export default defineComponent({
-    name:'home',
-    components: {
-
-    }
+    name:'project'
 });
-
 </script>
-
-
 <style lang="less">
     
 </style>
