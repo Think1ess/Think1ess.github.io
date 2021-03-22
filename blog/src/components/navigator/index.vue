@@ -1,34 +1,33 @@
 <template>
   <div>
     <el-menu 
-    :default-active="activeIndex" 
     mode="horizontal" 
-    @select="handleSelect"
+    router
     >
       <el-image
         class="logo-img"
         style="width: 50px"
         src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1466526497,3160877557&fm=26&gp=0.jpg"
       ></el-image>
-      <el-menu-item index="1" id="nav-left">
-        <router-link to="/" class="nav">
+      <el-menu-item index="/" id="nav-left">
+        <!-- <router-link to="/" class="nav"> -->
         <div>主页</div>
-        </router-link>
+        <!-- </router-link> -->
       </el-menu-item>
-      <el-menu-item index="2">
-        <router-link to="/project" class="nav">
+      <el-menu-item index="/project">
+        <!-- <router-link to="/project" class="nav"> -->
         <div>项目</div>
-        </router-link>
+        <!-- </router-link> -->
       </el-menu-item>
-      <el-menu-item index="3">
-        <router-link to="/resume" class="nav">
-        <div>简历</div>
-        </router-link>
+      <el-menu-item index="/resume">
+        <!-- <router-link to="/resume" class="nav"> -->
+        <div>豆瓣</div>
+        <!-- </router-link> -->
       </el-menu-item>
-      <el-menu-item index="4">
-        <router-link to="/about" class="nav">
-        <div>其他</div>
-        </router-link>
+      <el-menu-item index="/about">
+        <!-- <router-link to="/about" class="nav"> -->
+        <div>留言</div>
+        <!-- </router-link> -->
       </el-menu-item>
       <el-submenu index="5" id="nav-right">
         <template #title class="nav">
@@ -54,9 +53,9 @@ export default defineComponent({
       };
     },
     methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+      // handleSelect(key, keyPath) {
+      //   console.log(key, keyPath);
+      // }
     }
 });
 //

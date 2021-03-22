@@ -1,6 +1,7 @@
 <template>
   <div id="container">
     <navagator />
+
     <router-view />
 
   </div>
@@ -12,6 +13,7 @@ import navagator from "./components/navigator/index.vue";
 
 export default defineComponent({
   name: "App",
+
   components: {
     navagator,
   },

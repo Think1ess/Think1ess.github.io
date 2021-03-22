@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(e,c,t){"use strict";t.r(c);var n=t("7a23"),o={class:"about"},a=Object(n["createVNode"])("h1",null,"留言板",-1);function r(e,c){return Object(n["openBlock"])(),Object(n["createBlock"])("div",o,[a])}const u={};u.render=r;c["default"]=u}}]);
-//# sourceMappingURL=about.0091e678.js.map
