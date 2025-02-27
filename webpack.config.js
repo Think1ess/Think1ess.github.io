@@ -13,9 +13,9 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "docs"), // 输出到 docs 文件夹
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "./", // 保证路径正确
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -52,11 +52,12 @@ module.exports = {
     new webpack.DefinePlugin(envKeys),
   ],
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, "dist"),
     },
     proxy: {
-      '/api': 'http://localhost:3000'  // This will proxy API requests to Vercel dev server
+      '/api': 'http://localhost:3000'
     },
     compress: true,
     port: 3000,
