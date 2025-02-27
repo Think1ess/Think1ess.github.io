@@ -55,6 +55,9 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "dist"),
     },
+    proxy: {
+      '/api': 'http://localhost:3000'  // This will proxy API requests to Vercel dev server
+    },
     compress: true,
     port: 3000,
   },
