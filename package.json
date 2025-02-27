@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "vercel-dev": "vercel dev"
+    "vercel-dev": "vercel dev",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "react": "^18.2.0",

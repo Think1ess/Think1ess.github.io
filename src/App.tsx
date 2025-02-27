@@ -30,7 +30,15 @@ function App() {
         }),
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      
       setZenResponse(data.choices[0].message.content);
     } catch (error) {
       console.error("Error:", error);
